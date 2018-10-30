@@ -1,0 +1,131 @@
+.infomation-wrapper {
+	position: relative;
+	width: 100%;
+	padding: 3.125rem 0;
+	/*background: #667db6;
+	background: linear-gradient(to right, #243B55, #141E30, #141E30, #243B55);*/
+
+	background-image: url(/assets/images/common/banner/3.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.infomation-wrapper:before {
+	content: "";
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+}
+
+.content-section {
+ color: #fff;
+ position: relative;
+ z-index: 10;
+}
+
+.content-section h1 {
+	font-size: 3.25rem;
+}
+
+.content-section button,
+.content-section a {
+	border: 0;
+	cursor: pointer;
+	background-color: #0575E6;
+	/*border-radius: 28px;*/
+}
+
+.content-section button:hover,
+.content-section a:hover {
+	background-color: #0575E6;
+}
+
+.content-section button:focus,
+.content-section a:focus {
+	color: #fff;
+	background-color: #0575E6;
+}
+
+.main-content-group {
+	position: relative;
+	background-image: url(/assets/images/common/banner/7.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.parallax-bg {
+	z-index: 1;
+	height: auto;
+	padding: 50px 0;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	/*background-color: rgb(40,55,112);*/
+	background: rgba(0,0,0,0.5);
+}
+
+/*.parallax-bg:before {
+	content: "";
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+}*/
+
+.parallax-bg button,
+.parallax-bg a {
+	border-radius: 28px;
+	background-color: rgb(227,75,163);
+	box-shadow: 0 0 10px 2px rgba(227,75,163,.85);
+}
+
+.parallax-bg button:hover,
+.parallax-bg a:hover {
+	background-color: rgb(227,75,163);
+}
+
+.parallax-bg button:focus,
+.parallax-bg a:focus {
+	background-color: rgb(227,75,163);
+}
+
+.information-grid {
+	background-color: #0072ff;
+}
+
+.information-grid i {
+	color: #fff;
+}
+
+@media (max-width: 480px) {
+	.content-section h1 {
+		font-size: 2rem;
+		line-height: 38px;
+	}
+
+	.content-section h3 {
+		font-size: 1.5rem;
+	}
+}
+
+footer {
+	border-top: 1px solid #ccc;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+}
+
+footer .c-logo {
+	width: 120px;
+}

@@ -1,0 +1,92 @@
+header {
+	height: 60px;
+}
+
+header .brand-s {
+	display: none;
+}
+
+.brand-s > h5 {
+	border-bottom: 1px solid #c6d0da;
+}
+
+.c-logo {
+  width: 150px;
+}
+
+.gn-menu-main > li.brand-l > a {
+  padding: 0;
+  width: 140px;
+}
+
+.gn-menu-main > li.brand-l .c-logo {
+  width: 110px;
+}
+
+.gn-menu-main {
+	z-index: 34;
+	border-bottom: 1px solid #ccc;
+}
+
+.gn-menu-main > li > a {
+	font-size: 0.875rem;
+}
+
+.gn-menu-main > li > a.nav-icon {
+	padding: 0.625rem;
+}
+
+.gn-menu-main > li > a.nav-icon > i {
+	font-size: 2.25rem;
+	color: #999;
+}
+
+.gn-menu-main > li > .message-notification.on > i {
+	color: #2979FF;
+}
+
+header .message-notification > .count-badge {
+	position: absolute;
+	top: 7px;
+	right: 2px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 24px;
+	color: #fff;
+	background-color: #D50000;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	display: none;
+}
+
+header .message-notification.on > .count-badge {
+	display: block;
+}
+
+header .gn-menu-main > li > .avatar-frame {
+	position: relative;
+	padding: 0 0.625rem;
+}
+
+header .avatar-frame > img{
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 2px solid #5f6f81;
+}
+
+@media (max-width: 480px) {
+	.gn-menu-main > li > a {
+		padding: 0 10px;
+	}
+
+	header .brand-l {
+		display: none;
+	}
+
+	header .brand-s {
+		display: block;
+	}
+}

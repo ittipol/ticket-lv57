@@ -1,0 +1,375 @@
+.left-sidenav {
+	position: fixed;
+  top: 60px;
+  left: 0;
+  width: 290px;
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  z-index: 29;
+  overflow-y: auto;
+  overflow-x: hidden; 
+}
+
+.left-sidenav > button.close {
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	z-index: 80;
+	display: none;
+	font-size: 40px;
+	font-weight: 100;
+	color: red;
+}
+
+.fiter-panel-toggle {
+	background-color: #fff;
+	z-index: 30;
+	display: none;
+}
+
+.fiter-panel-toggle > button {
+	padding: 10px;
+}
+
+.left-sidenav h4 {
+	font-weight: 700;
+	color: #37454d;
+	font-size: 14px;
+	display: block;
+	margin: 0 0 1rem;
+	line-height: 1.25rem;
+}
+
+.main-panel {
+	margin-left: 290px;
+}
+
+.data-list {
+	position: relative;
+}
+
+.data-list-item {
+	position: relative;
+	width: 100%;
+	color: #37454d;
+	background-color: #fff;
+	box-shadow: 0 1px 4px rgba(41,51,57,.5); 
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.data-list-item .seller-chat-btn {
+	margin: 0.3125rem;
+}
+
+.additional-data-section i {
+	color: rgb(65,133,242);
+	font-size: 1.125rem;
+	width: 20px;
+	text-align: center;
+}
+
+.additional-data-section .additional-item {
+	margin-bottom: 1rem;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.additional-data-section .additional-item:last-child {
+	margin-bottom: 0;
+}
+
+.data-list-item .data-image {
+	position: relative;
+	min-height: 150px;
+	background-color: #bbb;
+	overflow: hidden;
+	display: block;
+}
+
+.data-list-item .data-image > img {
+	width: 100%;
+	min-height: 150px;
+}
+
+.data-list-item .data-image > .ticket-preview-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 50%;
+	height: 100%;
+}
+
+.data-list-item a.title {
+	color: #222;
+	font-size: 1.375rem;
+	/*font-weight: normal;*/
+	line-height: 30px;
+}
+
+.image-more {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	font-size: 1.25rem;
+	background-color: rgba(20,20,20,.7);
+	padding: 5px 20px;
+}
+
+.image-more > img {
+	width: 30px;
+}
+
+.price-section {
+	position: relative;
+}
+
+.price-section .original-price {
+	color: red;
+	text-decoration: line-through;
+	font-size: 1.125rem;
+}
+
+.price-section .price {
+	color: #428500;
+	font-size: 1.25rem;
+}
+
+.price-saving-flag {
+	color: #fff;
+	background-color: #D50000;
+	padding: 0 0.75rem;
+	/*padding: 0 1.5625rem;
+	font-size: 1.375rem;*/
+}
+
+.price-saving-flag.flag-lg {
+	padding: 0.3125rem 0.625rem;
+}
+
+.seller-section {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin-top: 1rem;
+}
+
+.seller-section .avatar-frame {
+	width: 50px;
+	height: 50px;
+	position: relative;
+}
+
+.seller-section .avatar {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #ddd;
+	border: 2px solid #5f6f81;
+	overflow: hidden;
+}
+
+.seller-section .online-name {
+	margin-left: 1rem;
+	line-height: 24px;
+	position: relative;
+}
+
+.seller-section .online-name > .online-status-indicator {
+	top: 31px;
+	left: 0px;
+}
+
+.seller-chat-btn {
+	border-radius: 0;
+	position: relative;
+	font-size: 24px;
+	padding: 8px 24px 8px 10px;
+}
+.seller-chat-btn > .online-status-indicator {
+	top: 18px;
+	right: 0;
+	left: auto;
+}
+
+.contact-section i {
+	font-size: 1rem;
+	color: rgb(65,133,242);
+}
+
+.contact-section h5 {
+	font-size: 1rem;
+}
+
+.ticket-detail-section {
+	color: #222;
+	line-height: 28px;
+	background-color: #fff;
+	border-top: 1px solid #aaa;
+	padding: 0.375rem;
+}
+
+.quick-chat-section i {
+	color: #2979FF;
+}
+
+.nav-tabs {
+	border: 0;
+	border-top: 1px solid #999;
+	height: 45px;
+	line-height: 45px;
+}
+
+.nav-tabs > li {
+	width: 100%;
+	text-align: center;
+	background-color: #C5CAE9;
+}
+
+/*.nav-tabs > li:hover {
+	background-color: #5e83ba;
+}*/
+
+.nav-tabs > li:hover a {
+	display: block;
+	text-decoration: none;
+}
+
+.btn-share {
+	border-radius: 0;
+}
+
+.btn-share:hover i {
+	color: #fff !important;
+}
+
+.btn-share.btn-facebook > i {
+	color: rgb(27,68,140);
+}
+
+.btn-share.btn-facebook:hover {
+	background-color: rgb(27,68,140);
+}
+
+.btn-share.btn-twitter > i {
+	color: #1da1f2;
+}
+
+.btn-share.btn-twitter:hover {
+	background-color: #1da1f2;
+}
+
+.btn-share.btn-googleplus > i {
+	color: rgb(195,33,16);
+}
+
+.btn-share.btn-googleplus:hover {
+	background-color: rgb(195,33,16);
+}
+
+.ticket-posting-detail {
+	color: #333;
+	background-color: #ddd;
+}
+
+.ticket-add-image-cover {
+	position: relative;
+	/*border-bottom: 1px solid #aaa;*/
+	background-color: rgb(18,34,47);
+	background-image: url(/assets/images/common/banner/banner22.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.ticket-add-image-cover:before {
+	content: "";
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+}
+
+.ticket-add-image-cover > .jumbotron {
+	position: relative;
+	background-color: transparent;
+	z-index: 9;
+}
+
+.ticket-add-image-cover > .jumbotron h1 {
+	line-height: 38px;
+	color: #ececec;
+}
+
+@media (max-width: 768px) {
+	.left-sidenav {
+		top: 120%;
+		width: 100%;
+		height: 100% !important;
+		/*background-color: #e8e8e8;*/
+		background-color: rgba(255,255,255,.78);
+		border-top: 4px solid #2979FF;
+		transition: top .24s cubic-bezier(0.15, 1, 0.3, 1);
+	}
+
+	.left-sidenav.show {
+		top: 0;
+		z-index: 50;
+	}
+
+	.fiter-panel-toggle {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		display: block;
+	}
+
+	.left-sidenav.show > button.close {
+		display: block;
+	}
+
+	.main-panel {
+		margin-left: 0;
+	}
+
+	.nav-tabs {
+		margin-right: 0;
+	}
+
+	.image-gallery-section {
+		min-height: 120px;
+	}
+
+	.content-fixed-bottom {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(255,255,255,.8);
+		border-top: 2px solid #0b7abf;
+		z-index: 9;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.left-sidenav {
+		transition: none;
+	}
+
+	/*.ticket-add-image-cover .jumbotron h1 {
+		font-size: 1.5rem;
+	}*/
+
+}
+
+.ticket-countdown {
+	color: red;
+}
