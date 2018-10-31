@@ -822,15 +822,21 @@ class TicketController extends Controller
           ->whereIn('date_type', [2,3])
           ->where('items.date_1','>=',$now);
 
-        }); 
+        });
 
       });
 
     }
 
-    $model->where(function($q) {
-      $q->where('closing_option','=',0);
+    $model->where(function($q) use ($now) {
+      // $q->where('closing_option','=',0);
+      $q->where([
+        ['closing_option','=',0],
+        ['date_2','>',$now]       
+      ]);
     });
+
+    // $model->where('date_2','>',$now);
 
     if($request->has('sort')) {
 
