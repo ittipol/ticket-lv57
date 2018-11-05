@@ -12,6 +12,13 @@
 <div class="container-fliud mb5 mb7-ns">
   <div class="main-panel">
 
+    <div>
+      <a href="http://articles.ticketeasys.com/" class="banner-link">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+        เข้าชมบทความ ทริปท่องเที่ยว ที่พัก อาหาร และอื่นๆ ที่น่าสนใจสำหรับคุณ
+      </a>
+    </div>
+
     <div class="c-grid-layout clearfix">
       <div id="item_list_panel"></div>
     </div>

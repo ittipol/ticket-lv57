@@ -17,6 +17,7 @@
               <a class="gn-icon fa-search"><span>ค้นหาบัตร</span></a>
             </li>
             <li><a href="/ticket" class="gn-icon fa-ticket">รายการขายบัตร</a></li>
+            <li><a href="http://articles.ticketeasys.com/" class="gn-icon fa-rss">บทความ ทริปท่องเที่ยว</a></li>
             <!-- @if(Auth::check())
               <li>
                 <a href="/account" class="gn-icon fa-user">{{Auth::user()->name}}</a>
