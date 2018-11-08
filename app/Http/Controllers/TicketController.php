@@ -832,7 +832,7 @@ class TicketController extends Controller
       // $q->where('closing_option','=',0);
       $q->where([
         ['closing_option','=',0],
-        ['date_2','>',$now]       
+        // ['date_2','>',$now]       
       ]);
     });
 
