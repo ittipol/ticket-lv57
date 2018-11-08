@@ -390,8 +390,9 @@ class TicketController extends Controller
     $model->place_location = strip_tags($request->get('place_location'));
     $model->price = str_replace(',','',strip_tags($request->get('price')));
 
-    if($request->has('original_price')) {
+    if($request->has('original_price') && ($request->get('original_price') != null)) {
       $model->original_price = str_replace(',','',strip_tags($request->get('original_price')));
+      dd($model->original_price);
     }
     
     $model->date_type = $request->get('date_type');
