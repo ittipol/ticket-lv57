@@ -1,4 +1,4 @@
-<div id="closing_item_modal" class="c-modal">
+<div id="closing_ticket_modal" class="c-modal">
   <a class="close"></a>
   <div class="c-modal-inner">
 
