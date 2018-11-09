@@ -150,7 +150,9 @@ class TicketController extends Controller
       $searchData['location'] = $request->get('location');
     }
 
-    if($request->has('start_date') || $request->has('end_date')) {
+    if(($request->has('start_date') && ($request->get('start_date') != null)) 
+      || 
+      ($request->has('end_date') && ($request->get('end_date') != null))) {
       $searching = true;
 
       $model->where(function ($query) use ($request) {
@@ -662,9 +664,9 @@ class TicketController extends Controller
 
   public function _list(Request $request) {
 
-    // if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
-    //   return false;
-    // }
+    if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+      return false;
+    }
 
     $model = Service::loadModel('Ticket')->query();
 
