@@ -161,21 +161,21 @@ class TicketController extends Controller
 
           $query
           ->where([
-            ['items.date_1','>=',$request->start_date],
-            ['items.date_1','<=',$request->end_date]
+            ['tickets.date_1','>=',$request->start_date],
+            ['tickets.date_1','<=',$request->end_date]
           ])
           ->orWhere([
-            ['items.date_2','>=',$request->start_date],
-            ['items.date_2','<=',$request->end_date]
+            ['tickets.date_2','>=',$request->start_date],
+            ['tickets.date_2','<=',$request->end_date]
           ]);
         }elseif($request->has('start_date') && ($request->get('start_date') != null)) {
           $query
-          ->where('items.date_1','>=',$request->start_date)
-          ->orWhere('items.date_2','>=',$request->start_date);
+          ->where('tickets.date_1','>=',$request->start_date)
+          ->orWhere('tickets.date_2','>=',$request->start_date);
         }elseif($request->has('end_date') && ($request->get('end_date') != null)) {
           $query
-          ->where('items.date_1','<=',$request->end_date)
-          ->orWhere('items.date_2','<=',$request->end_date);
+          ->where('tickets.date_1','<=',$request->end_date)
+          ->orWhere('tickets.date_2','<=',$request->end_date);
         }
 
       });
@@ -662,9 +662,9 @@ class TicketController extends Controller
 
   public function _list(Request $request) {
 
-    if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
-      return false;
-    }
+    // if(!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+    //   return false;
+    // }
 
     $model = Service::loadModel('Ticket')->query();
 
@@ -767,7 +767,9 @@ class TicketController extends Controller
 
     }
 
-    if($request->has('start_date') || $request->has('end_date')) {
+    if(($request->has('start_date') && ($request->get('start_date') != null)) 
+      || 
+      ($request->has('end_date') && ($request->get('end_date') != null))) {
       $searching = true;
 
       $model->where(function ($query) use ($request) {
@@ -778,21 +780,21 @@ class TicketController extends Controller
 
           $query
           ->where([
-            ['items.date_1','>=',$request->start_date],
-            ['items.date_1','<=',$request->end_date]
+            ['tickets.date_1','>=',$request->start_date],
+            ['tickets.date_1','<=',$request->end_date]
           ])
           ->orWhere([
-            ['items.date_2','>=',$request->start_date],
-            ['items.date_2','<=',$request->end_date]
+            ['tickets.date_2','>=',$request->start_date],
+            ['tickets.date_2','<=',$request->end_date]
           ]);
         }elseif($request->has('start_date') && ($request->get('start_date') != null)) {
           $query
-          ->where('items.date_1','>=',$request->start_date)
-          ->orWhere('items.date_2','>=',$request->start_date);
+          ->where('tickets.date_1','>=',$request->start_date)
+          ->orWhere('tickets.date_2','>=',$request->start_date);
         }elseif($request->has('end_date') && ($request->get('end_date') != null)) {
           $query
-          ->where('items.date_1','<=',$request->end_date)
-          ->orWhere('items.date_2','<=',$request->end_date);
+          ->where('tickets.date_1','<=',$request->end_date)
+          ->orWhere('tickets.date_2','<=',$request->end_date);
         }
 
       });
@@ -805,22 +807,22 @@ class TicketController extends Controller
 
           $query
           ->where('date_type','=',0)
-          ->where('items.date_1','=',null)
-          ->where('items.date_2','=',null);
+          ->where('tickets.date_1','=',null)
+          ->where('tickets.date_2','=',null);
 
         })
         ->orWhere(function($query) use ($now) {
 
           $query
           ->where('date_type','=',1)
-          ->where('items.date_2','>=',$now);
+          ->where('tickets.date_2','>=',$now);
 
         })
         ->orWhere(function($query) use ($now) {
 
           $query
           ->whereIn('date_type', [2,3])
-          ->where('items.date_1','>=',$now);
+          ->where('tickets.date_1','>=',$now);
 
         });
 
