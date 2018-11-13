@@ -875,11 +875,13 @@ class TicketController extends Controller
       $model->orderBy('tickets.activated_date','desc');
     }
 
-    $data = array();
+    // $data = array();
 
-    if(!$searching || (!$request->has('q') || ($request->get('q') == null)) || !empty($keywords)) {
-      $data = $model->paginate(48);
-    }
+    // if(!$searching || (!$request->has('q') || ($request->get('q') == null)) || !empty($keywords)) {
+    //   $data = $model->paginate(48);
+    // }
+
+    $data = $model->paginate(48);
 
     $next = true;
     if($request->page == $data->lastPage()) {
